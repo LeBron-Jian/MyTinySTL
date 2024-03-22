@@ -720,7 +720,7 @@ TEST(is_permutation_test)
   int arr1[] = { 1,2,3,4,5 };
   int arr2[] = { 3,4,5,2,1 };
   int arr3[] = { 1,2,3,4,6 };
-  // 因为提供的是 C++11 的支持，std::is_permutation 可能没有 C++14 的接口
+  /* 因为提供的是 C++11 的支持，std::is_permutation 可能没有 C++14 的接口 */
   EXPECT_EQ(std::is_permutation(arr1, arr1 + 5, arr2),
             mystl::is_permutation(arr1, arr1 + 5, arr2, arr2 + 5));
   EXPECT_EQ(std::is_permutation(arr1, arr1 + 5, arr3),
